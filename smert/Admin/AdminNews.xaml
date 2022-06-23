@@ -1,0 +1,43 @@
+﻿<Window x:Class="smert.Admin.AdminNews"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:smert.Admin"
+        mc:Ignorable="d"
+        Title="News" MinHeight="650" MinWidth="410" MaxHeight="650" MaxWidth="410">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <Button Name="News_Button" Grid.Row="1" Grid.Column="0" Content="Новости"/>
+        <Button Name="Schedule_Button" Click="Schedule_Button_Click" Grid.Row="1" Grid.Column="1" Content="Расписание"/>
+        <Button Name="Myprofile_Button" Click="Myprofile_Button_Click"  Grid.Row="1" Grid.Column="2" Content="Мой профиль"/>
+
+        <ListBox Name="NewsListBox" Grid.ColumnSpan="3" Margin="20">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid Margin="10 15 0 15">
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+
+                        <TextBlock Name="TypeOfChanges" Text="Изменение" Grid.Row="0" Margin="5"/>
+                        <TextBlock Name="StyleOfDance" Text="Жанр" Grid.Row="0" Margin="5"/>
+                        <TextBlock Name="NewDate" Text="Новая дата" Grid.Row="0" Margin="5"/>
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</Window>

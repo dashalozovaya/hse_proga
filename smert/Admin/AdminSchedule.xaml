@@ -1,0 +1,56 @@
+﻿<Window x:Class="smert.Admin.AdminSchedule"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:smert.Admin"
+        mc:Ignorable="d"
+        Title="ScheduleAdmin"  MinHeight="650" MinWidth="410" MaxHeight="650" MaxWidth="410">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+
+
+        <Button Grid.Row="1" Grid.Column="0" Name="News_button" Content="Новости" />
+        <Button Grid.Row="1" Grid.Column="1" Name="Schedule_button" Content="Расписание"/>
+        <Button Grid.Row="1" Grid.Column="2" Name="Myprofile_button" Content="Мой профиль"/>
+
+        <ListBox Name="ScheduleAdmin" Grid.ColumnSpan="3" Margin="20,20,20,20">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                        </Grid.RowDefinitions>
+                        <TextBlock Name="Date" Text="{Binding Style}" Grid.Row="0" />
+                        <TextBlock Name="Time" Text="{Binding Date}" Grid.Row="1" />
+                        <TextBlock Name="Style" Text="{Binding Time}" Grid.Row="2"/>
+                        <TextBlock Name="EventType" Text="{Binding Type}" Grid.Row="3" />
+                        <TextBlock Name="Teacher1" Text="{Binding Teacher}" Grid.Row="4"/>
+                        
+                        <Button Click="Cancel_button_Click" Grid.Row="5" HorizontalAlignment="Right" VerticalAlignment="Top" Name="Cancel_button" Content="Отменить" />
+
+
+                    </Grid>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </Grid>
+</Window>
+
+
+
+

@@ -1,0 +1,41 @@
+﻿<Window x:Class="smert.Admin.AdminAddMasterClass"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:smert.Admin"
+        mc:Ignorable="d"
+        Title="AddMasterClass" MinHeight="650" MinWidth="410" MaxHeight="650" MaxWidth="410">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition/>
+            <RowDefinition Height="70"/>
+        </Grid.RowDefinitions>
+
+        <Button Name="News_Button" Click="News_Button_Click"  Content="Новости"  Grid.Row="5" Grid.Column="0"/>
+        <Button Name="Schedule_Button" Click="Schedule_Button_Click"  Content="Расписание" Grid.Row="5" Grid.Column="1"/>
+        <Button Name="Myprofile_Button" Click="Myprofile_Button_Click" Content="Мой профиль" Grid.Row="5" Grid.Column="2"/>
+
+        <Button Name="Back" Click="Back_Click" Height="30" Content="назад"  Width="70" HorizontalAlignment="Right" VerticalAlignment="Top" Grid.Column="2"/>
+
+        <TextBlock Text="Введите жанр:" Grid.Row="0"  Grid.ColumnSpan="3" FontSize="15" Margin="37,27,100,57"/>
+        <TextBox Name="StyleMasterClass_TextBox" VerticalAlignment="Bottom" Margin="20" Height="30" Width="300" Grid.ColumnSpan="3" Grid.Row="0" Cursor="Arrow"/>
+        <TextBlock Text="Введите преподавателя:" Grid.Row="1"  Grid.ColumnSpan="3" FontSize="15" Margin="37,27,100,57"/>
+        <TextBox Name="TeacherMasterClass_TextBox" VerticalAlignment="Bottom" Margin="20" Height="30" Width="300" Grid.ColumnSpan="3" Grid.Row="1" Cursor="Arrow"/>
+        <TextBlock Text="Введите дату в формате дд.мм.гггг:" Grid.Row="2"  Grid.ColumnSpan="3" FontSize="15" VerticalAlignment="Bottom" Margin="37, 27, 100, 57" />
+        <TextBox Name="DateMasterClass_TextBox" Margin="20" VerticalAlignment="Bottom" Height="30" Width="300" Grid.ColumnSpan="3"  Grid.Row="2" Cursor="Arrow"/>
+        <TextBlock Text="Введите время:" Grid.Row="3" Margin="37,27,100,57" Grid.ColumnSpan="2" FontSize="15"/>
+        <TextBox Name="TimeMasterClass_TextBox" Margin="20" VerticalAlignment="Bottom" Height="30" Width="300" Grid.ColumnSpan="3"  Grid.Row="3" Cursor="Arrow"/>
+
+        <Button Name="MasterClassConfirm_Button" Click="MasterClassConfirm_Button_Click"  Content="Подтвердить доабвление" Grid.ColumnSpan="3" Grid.Row="4" Margin="70,51,70,37" Height="30"/>
+    </Grid>
+</Window>
